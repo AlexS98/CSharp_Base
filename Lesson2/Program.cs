@@ -24,7 +24,7 @@ namespace Lesson2
             double d = 165.2;
             float f = 125.2f;
 
-            decimal dec = 156.8m;
+            decimal dec1 = 156.8m;
 
             string str = "sdsfsdf";
 
@@ -33,27 +33,33 @@ namespace Lesson2
 
             // FirstPart();
 
-            Console.WriteLine("Welcome to Calculator");
+            // SecondPart();
 
-            Console.WriteLine("Enter first argument: ");
+            int inc = 5;
+            int dec = 5;
 
-            bool success1 = int.TryParse(Console.ReadLine(), out int firstInt);
+            Console.WriteLine("1. (default) Inc: " + inc + "; Dec: " + dec);
 
-            Console.WriteLine("Enter second argument: ");
+            inc++;
+            dec--;
 
-            bool success2 = int.TryParse(Console.ReadLine(), out int secondInt);
+            Console.WriteLine("2. (post) Inc: " + inc + "; Dec: " + dec);
 
-            if (success1 && success2)
-            {
-                Console.WriteLine("Sum: " + (firstInt + secondInt));
-            }
-            else
-            {
-                Console.WriteLine("Error! Incorrect input.");
-            }
+            ++inc;
+            --dec;
+
+            Console.WriteLine("3. (pref) Inc: " + inc + "; Dec: " + dec);
+
+            Console.WriteLine("4. (post-inline) Inc: " + inc++ + "; Dec: " + dec--);
+
+            Console.WriteLine("5. Inc: " + inc + "; Dec: " + dec);
+
+            Console.WriteLine("6. (pref-inline) Inc: " + ++inc + "; Dec: " + --dec);
+
+            Console.WriteLine("7. Inc: " + inc + "; Dec: " + dec);
         }
 
-        private static void FirstPart()
+        static void FirstPart()
         {
             Console.WriteLine("Enter your name:");
 
@@ -73,6 +79,28 @@ namespace Lesson2
             if (success)
             {
                 Console.WriteLine("Your age: " + userAge);
+            }
+            else
+            {
+                Console.WriteLine("Error! Incorrect input.");
+            }
+        }
+
+        static void SecondPart()
+        {
+            Console.WriteLine("Welcome to Calculator");
+
+            Console.WriteLine("Enter first argument: ");
+
+            bool success1 = double.TryParse(Console.ReadLine(), out double firstInt);
+
+            Console.WriteLine("Enter second argument: ");
+
+            bool success2 = int.TryParse(Console.ReadLine(), out int secondInt);
+
+            if (success1 && success2)
+            {
+                Console.WriteLine("Sum: " + (firstInt % secondInt));
             }
             else
             {
