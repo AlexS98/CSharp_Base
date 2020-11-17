@@ -59,7 +59,7 @@ namespace Lesson4
             Console.WriteLine("Option 1:");
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine(new string('-', 10 * 4 + 1));
                 Console.Write("|");
                 for (int k = 0; k < 10; k++)
                 {
@@ -93,7 +93,7 @@ namespace Lesson4
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine(new string('-', 10 * 4 + 1));
 
         }
     }
