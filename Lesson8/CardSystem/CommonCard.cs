@@ -4,7 +4,7 @@ using Lesson8.CardSystem;
 
 namespace Lesson8
 {
-    public class CommonCard
+    public abstract class CommonCard
     {
         public string Number { get; set; }
         protected CardSecurity Security { get; set; }
@@ -70,9 +70,6 @@ namespace Lesson8
             return amount * DepositCommissionPercent;
         }
 
-        public virtual decimal WithdrawCommission(decimal amount)
-        {
-            return amount * WithdrawCommissionPercent;
-        }
+        public abstract decimal WithdrawCommission(decimal amount);
     }
 }

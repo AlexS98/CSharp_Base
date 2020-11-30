@@ -1,8 +1,9 @@
 ﻿using System;
+using Lesson8.CardSystem.Interfaces;
 
 namespace Lesson8.CardSystem.Specific
 {
-    public class SavingsCard : CommonCard
+    public class SavingsCard : CommonCard, ICashDeposit
     {
         public SavingsCard(string number, CardSecurity security, DateTime expirationDate, Customer owner, Bank emittent)
             : base(number, security, expirationDate, owner, emittent)
@@ -17,7 +18,7 @@ namespace Lesson8.CardSystem.Specific
 
         public override decimal WithdrawCommission(decimal amount)
         {
-            return base.WithdrawCommission(amount);
+            return amount * 0.005m;
         }
     }
 }

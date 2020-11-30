@@ -1,12 +1,18 @@
 ﻿using System;
+using Lesson8.CardSystem.Interfaces;
 
 namespace Lesson8.CardSystem.Specific
 {
-    public class PlatinumCard : CommonCard
+    public class PlatinumCard : CommonCard, ICashWihdrawal, ICashDeposit
     {
         public PlatinumCard(string number, CardSecurity security, DateTime expirationDate, Customer owner, Bank emittent)
             : base(number, security, expirationDate, owner, emittent)
         {
+        }
+
+        public decimal AtmWithdraw()
+        {
+            throw new NotImplementedException();
         }
 
         public override decimal DepositCommission(decimal amount)

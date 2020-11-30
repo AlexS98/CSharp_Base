@@ -6,6 +6,6 @@ namespace Lesson7
 {
     public class Inventory
     {
-        public InventoryItem[] Items { get; set; }
+        public ICarriable[] Items { get; set; }
     }
 }

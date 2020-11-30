@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lesson7
+namespace Lesson8.CardSystem.Interfaces
 {
-    public class Armor : InventoryItem
+    public interface ICashDeposit
     {
     }
 }

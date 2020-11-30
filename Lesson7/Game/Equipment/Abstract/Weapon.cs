@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lesson7
 {
-    public class InventoryItem
+    public abstract class Weapon : ICarriable
     {
         public int Weight { get; set; }
         public int Size { get; set; }
