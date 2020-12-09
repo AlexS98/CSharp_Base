@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Lesson8.CardSystem;
 
 namespace Lesson8
@@ -14,6 +15,14 @@ namespace Lesson8
             customer.AddCards(new[] { card });
             card.Deposit(150);
             card.Withdraw(120);
+
+            int counter = 0;
+            while(++counter < 100_000_000)
+            {
+                Console.WriteLine(counter);
+                customer.AddCard(bank.EmitCard("sav", customer));
+            }
+
             Console.ReadKey();
         }
     }
